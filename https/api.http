@@ -1,0 +1,16 @@
+POST http://localhost:8080/shorten-urls
+Content-Type: application/json
+
+{
+  "originalUrl": "https://www.google.com"
+}
+
+
+### get
+@shortenUrlKey = GpRrUMQG
+GET http://localhost:8080/shorten-urls/{{shortenUrlKey}}
+Accept: application/json
+
+### redircet
+GET http://localhost:8080/shorten-urls/redirect/{{shortenUrlKey}}
+
